@@ -1,0 +1,118 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*background*/
+.caja {
+    background-image: url(https://www.ecestaticos.com/imagestatic/clipping/7c3/520/7c352078fa806dcdaa749ebf9a4eda50/de-hogwarts-a-rydell-aqui-mola-catear.jpg?mtime=1579565836);    
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+
+    overflow: hidden;
+}
+/*position, top, right, left, bottom*/
+/*puedo usar transform: translate */
+
+/*not found*/
+.texto {
+    position: absolute;
+    top: 200px;
+    left: 15%;
+    background-color: rgba(255, 255, 255, 0.747);
+    padding: 20px;
+}
+h6{
+    font-family: monospace;
+    font-size: 40px;
+    color: brown;
+}
+h4{
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+a{
+    font-family: sans-serif;
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+    /*position: relative;*/
+}
+a:hover{
+    opacity: 0.6;
+}
+
+div img {
+    width: 100%;
+}
+
+.globo {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 40%;
+    animation-name: volar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out ;
+
+    /*overflow: hidden;*/
+}
+.bart {
+    width: 8%;
+    position: absolute;
+    right: 550px;
+    top: 491px;
+}
+
+.skinner {
+    width: 8%;
+    position: absolute;
+    right: 450px;
+    top: 495px;
+    /*transform: translateX */
+    animation-name: correr;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    
+    /*overflow: hidden;*/
+}
+
+/* animaciónes */
+@keyframes correr{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(500px);
+    }
+}
+
+@keyframes volar{
+    5%{
+        /*transform: rotate(0.1turn);*/
+    }
+    10%{
+        transform: translateX(25px);
+        /*transform: rotate(-0.1turn);*/
+    }
+    30%{
+        transform: translate(150px, -5);
+    }
+    50%{
+        /*me gustaria que rote un poco*/
+        transform: translate(250px, -30%);
+        
+    }
+    100%{
+        transform: translate(370px, -50%);
+    }
+
+}
